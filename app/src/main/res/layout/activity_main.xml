@@ -6,13 +6,441 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="100dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="175dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="306dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="427dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="200dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="300dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="400dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="500dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="600dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="700dp"/>
+
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline1"
+        android:text="number of times since installation"
+        android:textSize="19sp"
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toRightOf="@id/guideline3"
+        app:layout_constraintRight_toRighOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline1"
+        android:text="number of times reached"
+        android:textSize="19sp"
+        />
+
+    <TextView
+        android:id="@+id/createMethod"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        app:layout_constraintBottom_toTopOf="@id/guideline4"
+        android:text="OnCreate Method"
+        android:textSize="30sp"
+        />
+
+    <TextView
+        android:id="@+id/startMethod"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:text="Start Method"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/guideline4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/resumeMethod"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:text="Resume Method"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline6"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/guideline5"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/pauseMethod"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:text="Pause Method"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/guideline6"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/stopMethod"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:text="Stop Method"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline8"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/guideline7"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/destroyMethod"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:text="Destroy Method"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline9"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/guideline8"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/restartMethod"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:text="Restart Method"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/guideline9"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/createShared"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        app:layout_constraintBottom_toTopOf="@id/guideline4"
+        />
+
+    <TextView
+        android:id="@+id/startShared"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/guideline4"
+        app:layout_constraintBottom_toTopOf="@id/guideline5"
+        />
+
+    <TextView
+        android:id="@+id/resumeShared"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/guideline5"
+        app:layout_constraintBottom_toTopOf="@id/guideline6"
+        />
+
+    <TextView
+        android:id="@+id/pauseShared"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/guideline6"
+        app:layout_constraintBottom_toTopOf="@id/guideline7"
+        />
+
+    <TextView
+        android:id="@+id/stopShared"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/guideline7"
+        app:layout_constraintBottom_toTopOf="@id/guideline8"
+        />
+
+    <TextView
+        android:id="@+id/destroyShared"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/guideline8"
+        app:layout_constraintBottom_toTopOf="@id/guideline9"
+        />
+
+    <TextView
+        android:id="@+id/restartShared"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/guideline9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/createCount"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline3"
+        app:layout_constraintRight_toLeftOf="@id/guideline10"
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        app:layout_constraintBottom_toTopOf="@id/guideline4"
+        />
+
+    <TextView
+        android:id="@+id/startCount"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline3"
+        app:layout_constraintRight_toLeftOf="@id/guideline10"
+        app:layout_constraintTop_toBottomOf="@id/guideline4"
+        app:layout_constraintBottom_toTopOf="@id/guideline5"
+        />
+
+    <TextView
+        android:id="@+id/resumeCount"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline3"
+        app:layout_constraintRight_toLeftOf="@id/guideline10"
+        app:layout_constraintTop_toBottomOf="@id/guideline5"
+        app:layout_constraintBottom_toTopOf="@id/guideline6"
+        />
+
+    <TextView
+        android:id="@+id/pauseCount"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline3"
+        app:layout_constraintRight_toLeftOf="@id/guideline10"
+        app:layout_constraintTop_toBottomOf="@id/guideline6"
+        app:layout_constraintBottom_toTopOf="@id/guideline7"
+        />
+
+    <TextView
+        android:id="@+id/stopCount"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline3"
+        app:layout_constraintRight_toLeftOf="@id/guideline10"
+        app:layout_constraintTop_toBottomOf="@id/guideline7"
+        app:layout_constraintBottom_toTopOf="@id/guideline8"
+        />
+
+    <TextView
+        android:id="@+id/destroyCount"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline3"
+        app:layout_constraintRight_toLeftOf="@id/guideline10"
+        app:layout_constraintTop_toBottomOf="@id/guideline8"
+        app:layout_constraintBottom_toTopOf="@id/guideline9"
+        />
+
+    <TextView
+        android:id="@+id/restartCount"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline3"
+        app:layout_constraintRight_toLeftOf="@id/guideline10"
+        app:layout_constraintTop_toBottomOf="@id/guideline9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="reset"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline10"
+        app:layout_constraintRight_toRighttOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        app:layout_constraintBottom_toTopOf="@id/guideline4"
+        android:id="@+id/reset1"
+        />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="reset"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline10"
+        app:layout_constraintRight_toRighttOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline4"
+        app:layout_constraintBottom_toTopOf="@id/guideline5"
+        android:id="@+id/reset2"
+        />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="reset"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline10"
+        app:layout_constraintRight_toRighttOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline5"
+        app:layout_constraintBottom_toTopOf="@id/guideline6"
+        android:id="@+id/reset3"
+        />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="reset"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline10"
+        app:layout_constraintRight_toRighttOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline6"
+        app:layout_constraintBottom_toTopOf="@id/guideline7"
+        android:id="@+id/reset4"
+        />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="reset"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline10"
+        app:layout_constraintRight_toRighttOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline7"
+        app:layout_constraintBottom_toTopOf="@id/guideline8"
+        android:id="@+id/reset5"
+        />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="reset"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline10"
+        app:layout_constraintRight_toRighttOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline8"
+        app:layout_constraintBottom_toTopOf="@id/guideline9"
+        android:id="@+id/reset6"
+        />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="reset"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottmOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline10"
+        app:layout_constraintRight_toRighttOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline9"
+        android:id="@+id/reset7"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
